@@ -1,10 +1,10 @@
-public static class Categoria {
+public class Categoria {
     public int IdCategoria { set;  get;}
     public string Nombre { set;  get;}
     public string Foto { set;  get;}
-    public Categoria(int IdCategoria, string Nombre, string Foto ) {
-        IdCategoria = IdCategoria;
-        Nombre = Nombre;
-        Foto = Foto;
+    public Categoria(int idCategoria, string nombre, string foto ) {
+        IdCategoria = idCategoria;
+        Nombre = nombre;
+        Foto = foto;
     }
 }

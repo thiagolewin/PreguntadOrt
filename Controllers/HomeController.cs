@@ -19,19 +19,20 @@ public class HomeController : Controller
     }
     public IActionResult ConfigurarJuego() {
         Juego.InicializarJuego();
-        return RedirectToAction("ConfigurarJuego");
+        return View("ConfigurarJuego");
     }
-    public IActionResult Comenzar() {
-        Juego.CargarPartida(Juego._username,Juego.dificultad,Juego.categoria);
-        return View("Jugar");
+    public IActionResult CambiarConfig(string _username, int dificultad, int categoria) {
+        Juego.CargarPartida(_username,dificultad,categoria);
+        return View("Index");
     }
     public IActionResult Jugar() {
-        ViewBag.Pregunta = Juego.ObtenerProximaPregunta();
-        if(ViewBag.Pregunta == null) {
-            return view ("Fin");
+        Pregunta preg = Juego.ObtenerProximaPregunta();
+        if(preg == null) {
+            return View("Fin");
         }
-        ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(Pregunta.IdPregunta);
-        return View("Juego");
+        ViewBag.Pregunta = preg;
+        ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
+        return View("Jugar");
     }
     [HttpPost] public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta) {
         ViewBag.Correcta = VerificarRespuesta(idPregunta,idRespuesta);

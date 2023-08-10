@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Jugar";
+}
+
+<main class="Height100 juego">
+    <h1>@ViewBag.Pregunta.Enunciado</h1>
+    <img src="/img/preguntadosCharacter.png">
+    <a href='@Url.Action("Comenzar","Home")'>Iniciar</a>
+</main>

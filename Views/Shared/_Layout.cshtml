@@ -9,8 +9,11 @@
 <body>
     <header>
         <nav>
-            <img src="./img/preguntados.png">
-            <img src="./img/config.png">
+            <a href='@Url.Action("Index","Home")'><img src="/img/logo.png"></a> 
+            @if (ViewData["Title"]?.ToString() != "ConfigurarJuego")
+            {
+                <a href='@Url.Action("ConfigurarJuego","Home")'><img src="/img/config.png" ></a> 
+            }
         </nav>
     </header>
     <div class="container">

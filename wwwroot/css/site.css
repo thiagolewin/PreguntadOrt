@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap');
+* {
+    margin:  0;
+    padding:  0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #8C00CE;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 20px;
+    align-items: center;
+}
+nav a {
+    height: 100%;
+    width: 100px;
+}
+nav a img {
+    width: 100%;
+    height: 100%;
+}
+nav a:nth-child(2) {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.Height100 {
+    height: calc(100vh - 70px);
+    background-color: #8C00CE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.index {
+
+}
+.index h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.index img {
+    margin-bottom: 70px;
+}
+.index a {
+    cursor: pointer;
+    width: 200px;
+    height: 75px;
+    background-color: #039B00;
+    border-radius: 25px;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.config {
+    background-color: #E9E9E9;
+
+}
+.config form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.config form h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+.config form input {
+    height: 30px;
+    width: 250px;
+}
+.config form select{
+    height: 30px;
+    width: 250px;
+    font-size: 1em;
+}
+.config form button {
+    width: 80px;
+    height: 40px;
+    margin-top: 50px;
+    background-position: center;
+    background-color: transparent;
+    position: absolute;
+    top: 35px;
+    margin-top: -20px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+    background-size: 100% 100%;
+    border: none;
+}

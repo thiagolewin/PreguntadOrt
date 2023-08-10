@@ -1,8 +1,8 @@
-public static class Dificultad {
+public class Dificultad {
     public int IdDificultad { set;  get;}
     public string Nombre { set;  get;}
-    public Dificultad(int IdCategoria, string Nombre) {
-        IdCategoria = IdCategoria;
-        Nombre = Nombre;
+    public Dificultad(int idDificultad, string nombre) {
+        IdDificultad = idDificultad;
+        Nombre = nombre;
     }
 }
