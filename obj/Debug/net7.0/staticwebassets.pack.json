@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\img\\config.png"
     },
     {
+      "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\entretenido.png",
+      "PackagePath": "staticwebassets\\img\\entretenido.png"
+    },
+    {
       "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
@@ -31,6 +35,14 @@
     {
       "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\preguntadosCharacter.png",
       "PackagePath": "staticwebassets\\img\\preguntadosCharacter.png"
+    },
+    {
+      "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\tick.png",
+      "PackagePath": "staticwebassets\\img\\tick.png"
+    },
+    {
+      "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\x.png",
+      "PackagePath": "staticwebassets\\img\\x.png"
     },
     {
       "Id": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\js\\site.js",

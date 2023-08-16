@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9UxvrWEifuXz2GVEwA8hngNdGBgnwJaPqisCfoR8aPk=",
+  "Hash": "nYAzVC2KUCkV0ZJPRqKQb7JQI6c+BNxtWZ5vlpf11zw=",
   "Source": "PreguntadOrt",
   "BasePath": "_content/PreguntadOrt",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\img\\config.png"
     },
     {
+      "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\entretenido.png",
+      "SourceId": "PreguntadOrt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\",
+      "BasePath": "_content/PreguntadOrt",
+      "RelativePath": "img/entretenido.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\entretenido.png"
+    },
+    {
       "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\logo.png",
       "SourceId": "PreguntadOrt",
       "SourceType": "Discovered",
@@ -168,6 +185,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\preguntadosCharacter.png"
+    },
+    {
+      "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\tick.png",
+      "SourceId": "PreguntadOrt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\",
+      "BasePath": "_content/PreguntadOrt",
+      "RelativePath": "img/tick.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\tick.png"
+    },
+    {
+      "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\x.png",
+      "SourceId": "PreguntadOrt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\",
+      "BasePath": "_content/PreguntadOrt",
+      "RelativePath": "img/x.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\x.png"
     },
     {
       "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\js\\site.js",

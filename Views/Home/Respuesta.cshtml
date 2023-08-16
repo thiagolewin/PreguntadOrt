@@ -4,11 +4,25 @@
 
 <main class="Height100 respuesta">
     @if(@ViewBag.Correcta == true) {
-        <h3>Correcto!</h3>
+        <h3>CORRECTO!</h3>
+        <div class="circulo"><img src="/img/tick.png"></div>
         <h1>@ViewBag.Pregunta</h1>
         <h2>@ViewBag.Respuesta</h2>
-        <a href='@Url.Action("Jugar","Home")'>Siguiente Pregunta</a>
+        <div class="barraProgreso">
+        <div></div>
+        <p style="display:none;">@ViewBag.Maximo</p>
+        <p>@ViewBag.Progreso</p>
+        </div>
+        <a href='@Url.Action("Jugar","Home")'>Avanzar</a>
     } else {
-
+        <h3>INCORRECTO!</h3>
+        <div class="circulo error"><img src="/img/x.png"></div>
+        <div class="barraProgreso">
+        <div></div>
+        <p style="display:none;">@ViewBag.Maximo</p>
+        <p>@ViewBag.Progreso</p>
+        </div>
+        <a href='@Url.Action("Reiniciar","Home", new {idPregunta = @ViewBag.IdPregunta})' class="red">Reiniciar</a>
     }
 </main>
+ <script src="/js/site.js"></script>

@@ -36,9 +36,24 @@ public class HomeController : Controller
     }
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta,string enunciado, string respuesta) {
         ViewBag.Correcta = Juego.VerificarRespuesta(idPregunta,idRespuesta);
+        ViewBag.IdPregunta = idPregunta;
         ViewBag.Pregunta = enunciado;
         ViewBag.Respuesta = respuesta;
+        ViewBag.Progreso = Juego._cantidadPreguntasCorrectas;
+        ViewBag.Maximo = Juego._cantidadPreguntas;
         return View("Respuesta");
+    }
+        public IActionResult Reiniciar(int idPregunta) {
+        List<Pregunta> pregs = BD.ObtenerPreguntas(Juego.dificultad,Juego.categoria);
+        Pregunta preg = new Pregunta();
+        foreach(var i in pregs) {
+            if (i.IdPregunta == idPregunta) {
+                preg = i;
+            }
+        }
+        ViewBag.Pregunta = preg;
+        ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
+        return View("Jugar");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

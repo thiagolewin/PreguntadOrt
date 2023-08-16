@@ -4,6 +4,7 @@ public static class Juego {
     public static int categoria {get; private set;} = 1;
     public static int _puntajeActual {get; private set;}
     public static int _cantidadPreguntasCorrectas { get; private set;} 
+    public static int _cantidadPreguntas { get; private set;} 
     public static List<Pregunta> _preguntas {get; private set;} = new List<Pregunta>();
     public static List<Respuesta> _respuestas {get; private set;} = new List<Respuesta>();
     public static void InicializarJuego() {
@@ -11,6 +12,7 @@ public static class Juego {
         dificultad = 1;
         categoria = 1;
         _puntajeActual = 0;
+        _cantidadPreguntas = 0;
         _cantidadPreguntasCorrectas = 0;
     }
     public static List<Categoria> ObtenerCategorias() {
@@ -22,6 +24,7 @@ public static class Juego {
     public static void CargarPartida(string username, int dificultad, int categoria) {
         _username = username;
         _preguntas = BD.ObtenerPreguntas(dificultad,categoria);
+        _cantidadPreguntas = _preguntas.Count;
         _respuestas = BD.ObtenerRespuestas(_preguntas);
     }
     public static Pregunta ObtenerProximaPregunta() {
