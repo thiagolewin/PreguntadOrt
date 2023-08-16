@@ -34,8 +34,10 @@ public class HomeController : Controller
         ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
         return View("Jugar");
     }
-    [HttpPost] public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta) {
-        ViewBag.Correcta = VerificarRespuesta(idPregunta,idRespuesta);
+    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta,string enunciado, string respuesta) {
+        ViewBag.Correcta = Juego.VerificarRespuesta(idPregunta,idRespuesta);
+        ViewBag.Pregunta = enunciado;
+        ViewBag.Respuesta = respuesta;
         return View("Respuesta");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

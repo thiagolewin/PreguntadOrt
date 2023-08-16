@@ -3,7 +3,12 @@
 }
 
 <main class="Height100 juego">
-    <h1>@ViewBag.Pregunta.Enunciado</h1>
-    <img src="/img/preguntadosCharacter.png">
-    <a href='@Url.Action("Comenzar","Home")'>Iniciar</a>
+    <div class="cardTitulo">
+        <h1 class="titulo">@ViewBag.Pregunta.Enunciado</h1>
+    </div>
+    <div class="respuestas">
+        @for(var i = 0; i<@ViewBag.Respuestas.Count;i++) {
+        <a href='@Url.Action("VerificarRespuesta","Home", new {idPregunta=@ViewBag.Pregunta.IdPregunta, idRespuesta = @i+1, enunciado =@ViewBag.Pregunta.Enunciado, respuesta = @ViewBag.Respuestas[i].Contenido})'>@ViewBag.Respuestas[i].Contenido</a>
+        }
+    </div>
 </main>

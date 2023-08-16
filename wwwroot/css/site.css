@@ -101,3 +101,70 @@ nav a:nth-child(2) {
     background-size: 100% 100%;
     border: none;
 }
+.cardTitulo{
+    width: 40%;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.titulo {
+    font-weight: 500;
+    font-size: 2em;
+    color: black;
+}
+.respuestas {
+    align-items: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-color: #39485e;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 30px;
+    margin-top: 200px;
+}
+.respuestas a{
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    padding: 10px;
+}
+.respuesta {
+    justify-content: flex-start;
+    padding:  0 100px;
+}
+.respuesta h3 {
+    background-color:#039B00;
+    color: white;
+    padding: 50px 90px;
+    font-size: 2em;
+    border-radius: 20px;
+}
+.respuesta h1 {
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+    margin-bottom: 100px;
+}
+.respuesta h2{
+    color: black;
+    background-color: white;
+    padding: 5px 50px;
+}
+.respuesta a {
+    color: white;
+    margin-top: 100px;
+}

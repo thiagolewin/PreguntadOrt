@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Jugar";
+}
+
+<main class="Height100 respuesta">
+    @if(@ViewBag.Correcta == true) {
+        <h3>Correcto!</h3>
+        <h1>@ViewBag.Pregunta</h1>
+        <h2>@ViewBag.Respuesta</h2>
+        <a href='@Url.Action("Jugar","Home")'>Siguiente Pregunta</a>
+    } else {
+
+    }
+</main>

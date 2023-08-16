@@ -1,9 +1,9 @@
 public static class Juego {
-    public static string _username {get; private set;}
-    public static int dificultad {get; private set;}
-    public static int categoria {get; private set;}
+    public static string _username {get; private set;} = "";
+    public static int dificultad {get; private set;} = 1;
+    public static int categoria {get; private set;} = 1;
     public static int _puntajeActual {get; private set;}
-    public static int _cantidadPreguntasCorrectas { get; private set;}
+    public static int _cantidadPreguntasCorrectas { get; private set;} 
     public static List<Pregunta> _preguntas {get; private set;} = new List<Pregunta>();
     public static List<Respuesta> _respuestas {get; private set;} = new List<Respuesta>();
     public static void InicializarJuego() {
