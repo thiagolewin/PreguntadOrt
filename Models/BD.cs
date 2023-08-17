@@ -21,6 +21,14 @@ public static class BD {
         return dificultades;
 
     }
+    public static List<Pregunta> ObtenerTodasLasPreguntas() {
+        List<Pregunta> preguntas = null;
+        using(SqlConnection db = new SqlConnection(_connectionString)) {
+            string sp = "ObtenerTodasLasPreguntas";
+            preguntas = db.Query<Pregunta>(sp, new {}, commandType: CommandType.StoredProcedure).ToList();
+        }
+        return preguntas;
+    }
     public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria) {
         List<Pregunta> preguntas = null;
         using(SqlConnection db = new SqlConnection(_connectionString)) {

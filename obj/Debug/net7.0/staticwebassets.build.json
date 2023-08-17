@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nYAzVC2KUCkV0ZJPRqKQb7JQI6c+BNxtWZ5vlpf11zw=",
+  "Hash": "Ayf4Ysk9gx52m4/t0Q3kWIFzartkr1P2y1Kqya9h04E=",
   "Source": "PreguntadOrt",
   "BasePath": "_content/PreguntadOrt",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\entretenido.png"
+    },
+    {
+      "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\entretenimiento.png",
+      "SourceId": "PreguntadOrt",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\",
+      "BasePath": "_content/PreguntadOrt",
+      "RelativePath": "img/entretenimiento.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\entretenimiento.png"
     },
     {
       "Identity": "C:\\Users\\47393575\\Desktop\\PreguntadOrt\\wwwroot\\img\\logo.png",

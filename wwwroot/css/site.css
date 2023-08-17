@@ -102,8 +102,8 @@ nav a:nth-child(2) {
     border: none;
 }
 .cardTitulo{
-    width: 40%;
-    height: 300px;
+    width: 70%;
+    height: 30vh;
     background-color: white;
     border-radius: 15px;
     position: absolute;
@@ -121,7 +121,7 @@ nav a:nth-child(2) {
 }
 .respuestas {
     align-items: center;
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -150,7 +150,6 @@ nav a:nth-child(2) {
     color: white;
     font-size: 4.5em;
     font-weight: 900;
-    margin-top: 120px;
 }
 .respuesta .circulo {
     width: 120px;
@@ -168,14 +167,15 @@ nav a:nth-child(2) {
 }
 .respuesta h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3vh;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
 }
 .respuesta h2{
     color: black;
     background-color: white;
     padding: 5px 50px;
+    margin-bottom: 5vh;
 }
 .respuesta a {
     color: white;
@@ -183,10 +183,10 @@ nav a:nth-child(2) {
     background-color: #039B00;
     font-size: 1.3em;
     font-weight: 900;
-    margin-top: 50px;
+    margin-top: 5vh;
 }
 .respuesta .error {
-    margin-bottom: 256px;
+    margin-bottom: 25vh;
 }
 .respuesta .red {
     background-color: red;
@@ -198,13 +198,12 @@ nav a:nth-child(2) {
     position: relative;
     align-items: center;
     display: flex;
-    margin-top: 50px;
 }
 .respuesta .barraProgreso div {
     background-color: #11D400;
     position: absolute;
     left: 0;
-    height: 100%;
+    height: 50px;
 }
 .respuesta .barraProgreso p {
     color: black;
@@ -217,3 +216,47 @@ nav a:nth-child(2) {
     content: '%';
     margin-left: 2px;
 }
+.fin {
+    justify-content: flex-start;
+}
+.fin h1 {
+    font-size: 3em;
+    margin-top: 50px;
+    color: white;
+}
+.fin img {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+.fin a {
+    color: white;
+    padding: 20px 50px;
+    background-color: #039B00;
+    font-size: 1.3em;
+    font-weight: 900;
+    margin-top: 5vh;
+}
+@media (max-width: 750px) {
+    body {
+      background-color: lightgray;
+    }
+    .cardTitulo h1{
+        font-size: 1.5em;
+    }
+    .respuestas a {
+        font-size: 1.5em;
+    }
+    .respuesta h1 {
+        font-size: 1.5em;
+    }
+    .respuesta h2 {
+        font-size: 1em;
+    }
+    .respuesta .barraProgreso {
+        height: 30px;
+    }
+    .respuesta .barraProgreso div {
+        height: 30px;
+    }
+  }

@@ -15,6 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Juego.InicializarJuego();
         return View();
     }
     public IActionResult ConfigurarJuego() {
@@ -44,7 +45,7 @@ public class HomeController : Controller
         return View("Respuesta");
     }
         public IActionResult Reiniciar(int idPregunta) {
-        List<Pregunta> pregs = BD.ObtenerPreguntas(Juego.dificultad,Juego.categoria);
+        List<Pregunta> pregs = Juego._preguntas;
         Pregunta preg = new Pregunta();
         foreach(var i in pregs) {
             if (i.IdPregunta == idPregunta) {

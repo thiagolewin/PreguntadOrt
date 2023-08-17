@@ -11,7 +11,11 @@
         <div class="barraProgreso">
         <div></div>
         <p style="display:none;">@ViewBag.Maximo</p>
-        <p>@ViewBag.Progreso</p>
+        <p style="display:none;">@ViewBag.Progreso</p>
+        @{
+            int numero = 100/@ViewBag.Maximo * @ViewBag.Progreso;
+        }
+        <p>@numero</p>
         </div>
         <a href='@Url.Action("Jugar","Home")'>Avanzar</a>
     } else {
@@ -20,7 +24,11 @@
         <div class="barraProgreso">
         <div></div>
         <p style="display:none;">@ViewBag.Maximo</p>
-        <p>@ViewBag.Progreso</p>
+        <p style="display:none;">@ViewBag.Progreso</p>
+        @{
+            int numero = 100/@ViewBag.Maximo * @ViewBag.Progreso;
+        }
+        <p>@numero</p>
         </div>
         <a href='@Url.Action("Reiniciar","Home", new {idPregunta = @ViewBag.IdPregunta})' class="red">Reiniciar</a>
     }

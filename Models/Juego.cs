@@ -12,8 +12,10 @@ public static class Juego {
         dificultad = 1;
         categoria = 1;
         _puntajeActual = 0;
-        _cantidadPreguntas = 0;
         _cantidadPreguntasCorrectas = 0;
+        _preguntas = BD.ObtenerTodasLasPreguntas();
+        _respuestas = BD.ObtenerRespuestas(_preguntas);
+        _cantidadPreguntas = _preguntas.Count;
     }
     public static List<Categoria> ObtenerCategorias() {
         return BD.ObtenerCategorias();

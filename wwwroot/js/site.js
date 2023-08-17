@@ -6,7 +6,7 @@ function modificarBarra() {
     const barra = document.querySelector(".barraProgreso")
     const barrachild = barra.children[0]
     const widthBarra = barra.clientWidth;
-    barrachild.style.width = widthBarra * barra.children[2].textContent/barra.children[1].textContent + "px"
+    barrachild.style.width = widthBarra * parseInt(barra.children[2].textContent)/parseInt(barra.children[1].textContent) + "px"
     console.log("a")
 }
 modificarBarra()
