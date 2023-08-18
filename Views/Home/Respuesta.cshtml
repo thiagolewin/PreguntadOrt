@@ -13,7 +13,7 @@
         <p style="display:none;">@ViewBag.Maximo</p>
         <p style="display:none;">@ViewBag.Progreso</p>
         @{
-            int numero = 100/@ViewBag.Maximo * @ViewBag.Progreso;
+         int numero = (int)Math.Ceiling((double)100 / (int)@ViewBag.Maximo * (int)@ViewBag.Progreso);
         }
         <p>@numero</p>
         </div>

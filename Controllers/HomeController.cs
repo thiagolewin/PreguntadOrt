@@ -31,6 +31,7 @@ public class HomeController : Controller
         if(preg == null) {
             return View("Fin");
         }
+        ViewBag.Tiempo = Juego.inicioJuego;
         ViewBag.Pregunta = preg;
         ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
         return View("Jugar");
