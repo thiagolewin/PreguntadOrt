@@ -2,7 +2,7 @@ public static class Juego {
     public static string _username {get; private set;} = "";
     public static int dificultad {get; private set;} = 1;
     public static int categoria {get; private set;} = 1;
-    public static DateTime inicioJuego {get;private set;} = DateTime.Now;
+    public static DateTime inicioJuego {get; set;} = DateTime.Now;
     public static int _puntajeActual {get; private set;}
     public static int _cantidadPreguntasCorrectas { get; private set;} 
     public static int _cantidadPreguntas { get; private set;} 

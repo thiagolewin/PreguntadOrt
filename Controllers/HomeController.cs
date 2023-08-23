@@ -18,6 +18,9 @@ public class HomeController : Controller
         Juego.InicializarJuego();
         return View();
     }
+    public IActionResult SinTiempo() {
+        return View("Tiempo");
+    }
     public IActionResult ConfigurarJuego() {
         Juego.InicializarJuego();
         return View("ConfigurarJuego");
@@ -27,6 +30,7 @@ public class HomeController : Controller
         return View("Index");
     }
     public IActionResult Jugar() {
+        Juego.inicioJuego = DateTime.Now;
         Pregunta preg = Juego.ObtenerProximaPregunta();
         if(preg == null) {
             return View("Fin");
@@ -46,6 +50,7 @@ public class HomeController : Controller
         return View("Respuesta");
     }
         public IActionResult Reiniciar(int idPregunta) {
+        Juego.inicioJuego = DateTime.Now;
         List<Pregunta> pregs = Juego._preguntas;
         Pregunta preg = new Pregunta();
         foreach(var i in pregs) {
@@ -53,6 +58,7 @@ public class HomeController : Controller
                 preg = i;
             }
         }
+        ViewBag.Tiempo = Juego.inicioJuego;
         ViewBag.Pregunta = preg;
         ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(preg.IdPregunta);
         return View("Jugar");

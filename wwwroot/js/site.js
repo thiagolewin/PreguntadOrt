@@ -3,6 +3,7 @@
 
 // Write your JavaScript code.
 let tiempo = undefined;
+const maxTiempo = 15;
 function modificarBarra() {
     const barra = document.querySelector(".barraProgreso")
     if (barra) {
@@ -12,31 +13,27 @@ function modificarBarra() {
     }
 }
 function actualizarTimer() {
-    console.log("asd")
     const timer = document.querySelector(".tiempo")
+    const barraTiempo = document.querySelector(".barraTiempo")
     if (timer) {
         if (tiempo == undefined) {
             tiempo = timer.textContent
         }
-        console.log(tiempo)
         const fechaJs = TraerJs(tiempo)
         const fechaActual = new Date()
         const diferenciaEnMilisegundos = fechaActual -fechaJs
-        let segundos = Math.floor(diferenciaEnMilisegundos / 1000)
-        let minutos = Math.floor(segundos / 60)
-        segundos%= 60
-        let horas = Math.floor(minutos/ 60)
-        minutos %= 60
-        var tiempoFormateado =
-    (horas < 10 ? "0" : "") + horas + ":" +
-    (minutos < 10 ? "0" : "") + minutos + ":" +
-    (segundos < 10 ? "0" : "") + segundos;
+        let segundos = diferenciaEnMilisegundos / 1000
+        if (segundos >= maxTiempo) {
+            window.location = "/Home/SinTiempo";
+        } else {
+            barraTiempo.children[0].style.width = barraTiempo.clientWidth - barraTiempo.clientWidth/maxTiempo * segundos + "px"
+            barraTiempo.children[0].children[0].textContent = Math.floor(maxTiempo - segundos) 
+        }
 
     }
 }
 function TraerJs(tiempo) {
-        const tiempoJs = tiempo.textContent.split(" ");
-        console.log(tiempoJs[1])
+        const tiempoJs = tiempo.split(" ");
       
         const horaPartes = tiempoJs[1].split(":");
         const fechaPartes = tiempoJs[0].split("/")
@@ -48,4 +45,4 @@ modificarBarra()
 actualizarTimer()
 setInterval(()=> {
     actualizarTimer()
-},1000)
+},10)

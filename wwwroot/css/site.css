@@ -120,12 +120,30 @@ nav a:nth-child(2) {
     color: black;
 }
 .tiempo {
+    display: none;
+}
+.barraTiempo {
+    width: 60%;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #8C00CE;
     position: absolute;
     top: 7px;
-    background-color:#039B00;
-    font-size: 2em;
-    padding: 10px;
-    color: white;
+}
+.barraTiempo div {
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    border-radius: 20px;
+    background-color: rgb(39, 230, 13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.barraTiempo div h2 {
+    font-size: 1em;
+    color: rgb(22, 18, 18);
 }
 .respuestas {
     align-items: center;
